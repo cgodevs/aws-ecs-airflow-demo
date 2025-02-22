@@ -15,5 +15,6 @@ Deploy all versions of a github repo as zip files in an s3 bucket, then call a l
 - Criar EFS (OK)
 - Criar Role Especial com Inline Policy acrescentada para Lambda poder ler o EFS e EC2 (OK)
 - Criar Lambda para salvar versões do repo no S3 e EFS
-- Criar Role para Codepipeline acessar S3 e Lambda (Criar projeto CodeBuild, incluindo build commands)
+- (Opcional) Criar projeto CodeBuild, incluindo build commands, pois é interessante para desconsiderar alguns arquivos, mas não é estritamente necessário
+- Criar Role para Codepipeline acessar S3 e Lambda 
 - Criar Codepipeline
