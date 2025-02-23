@@ -35,6 +35,7 @@ def download_s3_file(bucket_name, object_key):
     except Exception as e:
         raise Exception({'statusCode': 500, 'body': f"Error downloading {object_key} from S3.", 'error': str(e)})
 
+
 def extract_to_efs(zip: io.BytesIO):
     try:
         with zipfile.ZipFile(zip, 'r') as zip_ref:
@@ -42,6 +43,7 @@ def extract_to_efs(zip: io.BytesIO):
         print(f"Extracted object to {EFS_MOUNT_PATH}")
     except Exception as e:
         raise Exception({'statusCode': 500, 'body': f"Error extracting object.", 'error': str(e)})
+
 
 def lambda_handler(event, context):
     # Try to extract bucket and object key from event
