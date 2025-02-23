@@ -13,7 +13,6 @@ Deploy all versions of a github repo as zip files in an s3 bucket, then call a l
 - Conectar AWS ao GitHub através do app na conta
 - Criar S3 bucket para armazenar versões do repo
 - Criar EFS e EFS Point (algumas configurações importantes)
-
 - Criar Security groups de acesso entre Lambda, ECS e EFS
 - Criar Codepipeline
 - Criar VPC Endpoint para que a Lambda tenha acesso ao S3 (caso ela e o EFS estiverem em uma mesma VPC, ao contrário do S3, que nunca está)
