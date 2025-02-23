@@ -18,4 +18,4 @@ Deploy all versions of a github repo as zip files in an s3 bucket, then call a l
 - Criar VPC Endpoint para que a Lambda tenha acesso ao S3 (caso ela e o EFS estiverem em uma mesma VPC, ao contrário do S3, que nunca está)
 - Criar Role Especial com Inline Policy acrescentada para Lambda poder ler do S3, ser invocada por um bucket de lá e escrever no EFS
 - Criar Resource-Based Policy para esta Lambda
-- Criar Lambda para salvar versões do repo no S3 e EFS 
+- Criar Lambda para salvar versões do repo armazenadas no S3, extrair seus arquivos e copiá-los para o EFS 
