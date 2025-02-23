@@ -1,0 +1,40 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"elasticfilesystem:ClientMount",
+				"elasticfilesystem:ClientWrite",
+				"elasticfilesystem:ClientRootAccess"
+			],
+			"Resource": "arn:aws:elasticfilesystem:us-east-1:<ACCOUNT_ID>:file-system/<FILE_SYSTEM_NAME>"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ec2:CreateNetworkInterface",
+				"ec2:DescribeNetworkInterfaces",
+				"ec2:DeleteNetworkInterface"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:ListBucket",
+				"s3:*"
+			],
+			"Resource": [
+				"arn:aws:s3:::<BUCKET_NAME>",
+				"arn:aws:s3:::<BUCKET_NAME>/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": "lambda:InvokeFunction",
+			"Resource": "arn:aws:lambda:us-east-1:<ACCOUNT_ID>:function:<FUNCTION_NAME>"
+		}
+	]
+}
